@@ -4,25 +4,9 @@
 
 ## Prerequisites
 
-### 1. Python 3.10+
-
 ```bash
-# Install via Homebrew
-brew install python@3.10
-```
-
-### 2. MLX-LM Package
-
-```bash
+# Install mlx-lm (requires Python 3.10+)
 pip install mlx-lm
-```
-
-This will also install the required dependencies (mlx, transformers, huggingface-hub, etc.)
-
-### 3. Verify Installation
-
-```bash
-python3 -c "import mlx_lm; print('mlx-lm installed successfully')"
 ```
 
 ## Install WhisperPolish
@@ -81,35 +65,26 @@ cp -r WhisperPolish.app /Applications/
 
 Select from the menu or enter any `mlx-community` model ID:
 
-| Model | RAM | Speed | Notes |
-|-------|-----|-------|-------|
-| `mlx-community/Qwen3-4B-Instruct-2507-4bit` | ~2GB | Fast | Default, recommended |
-| `mlx-community/Qwen2.5-3B-Instruct-4bit` | ~1.5GB | Faster | Lighter |
-| `mlx-community/Qwen3-8B-Instruct-4bit` | ~4GB | Better | Higher quality |
-| `mlx-community/gemma-3n-E4B-it-4bit` | ~3GB | Good | Alternative |
+| Model | RAM | Notes |
+|-------|-----|-------|
+| `mlx-community/Qwen3-4B-Instruct-2507-4bit` | ~2GB | Default |
+| `mlx-community/Qwen2.5-3B-Instruct-4bit` | ~1.5GB | Lighter |
+| `mlx-community/Qwen3-8B-Instruct-4bit` | ~4GB | Higher quality |
+| `mlx-community/gemma-3n-E4B-it-4bit` | ~3GB | Alternative |
 
-Browse more models: https://huggingface.co/mlx-community
+Browse more: https://huggingface.co/mlx-community
 
 ## Requirements
 
-- macOS 12+ (Monterey or later)
-- Apple Silicon (M1/M2/M3/M4)
+- macOS 12+ with Apple Silicon (M1/M2/M3/M4)
 - Python 3.10+
-- ~2-4GB RAM for the model (depending on model choice)
 
 ## Troubleshooting
 
 **App shows yellow but never turns green:**
 - Check "View Logs" for errors
 - Ensure `mlx-lm` is installed: `pip install mlx-lm`
-- Ensure Python is in your shell PATH
-
-**"No module named 'mlx_lm'" in logs:**
-```bash
-pip install mlx-lm
-```
 
 **Model download stuck:**
 - Check internet connection
-- View logs for progress
 - First download can take several minutes
